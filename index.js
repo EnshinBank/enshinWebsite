@@ -1,12 +1,16 @@
 const express = require("express");
 const cors = require("cors");
-
+require("dotenv")
 
 const app = express();
 
+const port = 5000;
 app.use(cors());
 
-const port = 5000;
+app.get("/", (req, res) => { res.status(200).send("Hello, World!");})
+
+
+
 
 
 app.listen(port,()=>{console.log(`server is running in ${port}`)});
