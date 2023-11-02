@@ -45,7 +45,6 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: node-app
-          path: ./build
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
@@ -54,4 +53,4 @@ jobs:
           app-name: 'enshinwebsite'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BF4C808F3F3E442E9A04D2871239FA27 }}
-          package: ./build
+  
