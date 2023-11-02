@@ -32,8 +32,6 @@ jobs:
         with:
           name: node-app
           path: .
-      - name: Set up Azure service build and deploy workflow config
-        uses: azure/setup-azure-webapps-deploy@v1
 
   deploy:
     runs-on: ubuntu-latest
